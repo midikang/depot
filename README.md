@@ -37,3 +37,8 @@ title:string description:text image_url:string price:decimal
 ## 9.1 Iteration D1: Finding a Cart
 rails generate scaffold Cart
 rake db:migrate
+
+## 9.2 Iteration D2: Connecting Products to Carts
+rails generate scaffold LineItem product:references cart:belongs_to
+rake db:migrate
+
