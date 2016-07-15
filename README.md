@@ -26,3 +26,7 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+## create project
+rails generate scaffold Product \
+title:string description:text image_url:string price:decimal
