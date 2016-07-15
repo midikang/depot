@@ -21,5 +21,6 @@ class Product < ActiveRecord::Base
       else
         errors.add(:base, 'Line Items present')
         return false
+      end
     end
 end

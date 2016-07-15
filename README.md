@@ -42,3 +42,4 @@ rake db:migrate
 rails generate scaffold LineItem product:references cart:belongs_to
 rake db:migrate
 
+rake test test/controllers/line_items_controller_test.rb
