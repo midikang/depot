@@ -30,3 +30,10 @@ Please feel free to use a different markup language if you do not plan to run
 ## create project
 rails generate scaffold Product \
 title:string description:text image_url:string price:decimal
+
+
+# CHAPTER 9 - Task D: Cart Creation
+
+## 9.1 Iteration D1: Finding a Cart
+rails generate scaffold Cart
+rake db:migrate
