@@ -20,7 +20,7 @@ class LineItemsControllerTest < ActionController::TestCase
     assert_difference('LineItem.count') do
       post :create, product_id: products(:ruby).id
     end
-  #This method 'assign' gives us access to the instance variables that have been (or can
+  #This method 'assigns' gives us access to the instance variables that have been (or can
   #be) assigned by controller actions for use in views.
     assert_redirected_to cart_path(assigns(:line_item).cart)
   end
