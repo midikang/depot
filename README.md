@@ -88,3 +88,11 @@ class CombineItemsInCart < ActiveRecord::Migration
 end
 
 rake db:migrate:status
+
+# Creating an Ajax-Based Cart
+1. add "remote:true" to button_to in app/views/store/index.html.erb
+2. add "format.js" to respond_to in line_items_controller
+3. create create.js.erb in app/view/line_items
+```
+$('#cart').html("<%= escape_javascript render(@cart) %>");
+```
