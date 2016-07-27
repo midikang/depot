@@ -96,3 +96,36 @@ rake db:migrate:status
 ```
 $('#cart').html("<%= escape_javascript render(@cart) %>");
 ```
+
+## 11.3 Iteration F3: Highlighting Changes
+# add by Midi
+gem 'jquery-ui-rails', '5.0.5'
+bundle install
+
+application.js
+```
+//= require jquery-ui/effect-blind
+```
+
+```
+format.js { @current_item = @line_item}
+```
+
+```
+<% if line_item == @current_item %>
+  <tr id="current_item">
+<% else %>
+  <tr>
+```
+
+
+create.js.erb
+```
+$('#cart').html("<%= escape_javascript render(@cart) %>");
+
+$('#current_item').css({
+  'background-color':'#88ff88'
+}).animate({
+'background-color':'#114411'
+}, 1000);
+```
