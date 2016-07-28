@@ -144,3 +144,11 @@ In this chapter, we’ll see
 rails generate scaffold Order name address:text email pay_type
 ```
 
+
+# CHAPTER 14 - Logging In
+## 14.1 Iteration I1: Adding Users
+
+rails generate scaffold User name:string password:digest
+
+# Use ActiveModel has_secure_password
+gem 'bcrypt-ruby', '~> 3.0.0'
