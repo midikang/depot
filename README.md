@@ -129,3 +129,18 @@ $('#current_item').css({
 'background-color':'#114411'
 }, 1000);
 ```
+
+
+# CHAPTER 12 - Task G: Check Out!
+In this chapter, we’ll see
+• linking tables with foreign keys;
+• using belongs_to, has_many, and :through;
+• creating forms based on models (form_for);
+• linking forms, models, and views; and
+• generating a feed using atom_helper on model objects.
+
+## 12.1 Iteration G1: Capturing an Order
+```
+rails generate scaffold Order name address:text email pay_type
+```
+
