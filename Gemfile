@@ -52,3 +52,5 @@ gem 'quiet_assets', group: :development
 group :development, :test do
   gem 'byebug',      '3.4.0'
 end
+
+gem "passenger", ">= 5.0.25", require: "phusion_passenger/rack_handler"
