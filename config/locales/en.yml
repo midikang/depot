@@ -26,34 +26,52 @@
 # adopted to make your coding life easier. Rails will also treat names that contain
 # html as a component (in other words, the string .html.) as HTML key names.
 en:
-  hello: "Hello world"
 
-  layouts:
-    application:
-      title:  "Progmatic Bookshelf"
-      home: "Home"
-      questions: "Questions"
-      news: "News"
-      contact: "Contact"
-      login: "Login"
-      logout: "Logout"
-      
-  store:
-    index:
-      title_html: "Your Pragmatic Catalog"
-      add_html: "1Add to Cart"
-      
-  carts:
-    _cart:
-      your_cart: "Your Cart"
-      check_out: "Check Out"
-      empty_cart: "Empty Cart"
-      
   number:
     currency:
       format:
-        unit: "$"
+        unit:      "$"
         precision: 2
         separator: "."
         delimiter: ","
-        format:     "%u%n"
+        format:    "%u%n"
+
+  errors:
+    template:
+      body:        "There were problems with the following fields:"
+      header:       
+        one:       "1 error prohibited this %{model} from being saved"
+        other:     "%{count} errors prohibited this %{model} from being saved"
+
+  layouts:
+    application:
+      title:       "Pragmatic Bookshelf"
+      home:        "Home"
+      questions:   "Questions"
+      news:        "News"
+      contact:     "Contact"
+      login:       "Login"
+      logout:      "Logout"
+  carts:
+    cart:
+      title:       "Your Cart"
+      empty:       "Empty cart"
+      checkout:    "Checkout"
+
+  store:
+    index:
+      title_html:  "Your Pragmatic Catalog"
+      add_html:    "Add to Cart"
+
+  orders:
+    new:
+      legend:       "Please Enter Your Details"
+    form:
+      name:         "Name"
+      address_html: "Address"
+      email:        "E-mail"
+      pay_type:     "Pay with"
+      pay_prompt_html: "Select a payment method"
+      submit:       "Place Order"
+
+  thanks:          "Thank you for your order"
