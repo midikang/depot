@@ -48,3 +48,12 @@ en:
       your_cart: "Your Cart"
       check_out: "Check Out"
       empty_cart: "Empty Cart"
+      
+  number:
+    currency:
+      format:
+        unit: "$"
+        precision: 2
+        separator: "."
+        delimiter: ","
+        format:     "%u%n"

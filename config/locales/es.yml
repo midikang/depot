@@ -20,3 +20,12 @@ es:
       your_cart: "Carrito de la Compra"
       check_out: "Comprar"
       empty_cart: "Vaciar Carrito"  
+      
+  number:
+    currency:
+      format:
+        unit: "$US"
+        precision: 2
+        separator: "."
+        delimiter: ","
+        format:     "%n&nbsp;%u"    
