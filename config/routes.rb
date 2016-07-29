@@ -19,22 +19,27 @@ Depot::Application.routes.draw do
   # get "sessions/destroy"
   resources :users
 
-  resources :orders
-
-  resources :line_items
-
-  resources :carts
-
-  get "store/index"
   resources :products do
     get :who_bought, on: :member
   end
+
+  # What we have done is nested our resources and root declarations inside a
+  # scope declaration for :locale. Furthermore, :locale is in parentheses, which is
+  # the way to say that it is optional. Note that we did not choose to put the
+  # administrative and session functions inside this scope, because it is not our
+  # intent to translate them at this time.
+  scope '(:locale)' do
+    resources :orders
+    resources :line_items
+    resources :carts
+    root 'store#index', as: 'store', via: :all
+  end
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   # as: 'store' ,tells Rails to create a store_path accessor method
-  root 'store#index', as: 'store'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
