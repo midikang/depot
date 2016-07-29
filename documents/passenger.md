@@ -10,3 +10,5 @@ cd /path-to-your-app
 bundle install
 
 bundle exec passenger start
+
+

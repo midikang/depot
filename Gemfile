@@ -3,8 +3,6 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -50,7 +48,14 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'quiet_assets', group: :development
 
 group :development, :test do
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3'
   gem 'byebug',      '3.4.0'
 end
 
 gem "passenger", ">= 5.0.25", require: "phusion_passenger/rack_handler"
+
+
+group :production do
+  gem 'mysql2' , '~> 0.3.13'
+end
