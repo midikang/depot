@@ -48,3 +48,7 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 # gem 'debugger', group: [:development, :test]
 
 gem 'quiet_assets', group: :development
+
+group :development, :test do
+  gem 'byebug',      '3.4.0'
+end
