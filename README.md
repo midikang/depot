@@ -152,3 +152,46 @@ rails generate scaffold User name:string password:digest
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
+
+## 14.2 Iteration I2: Authenticating Users
+depot> rails generate controller Sessions new create destroy
+depot> rails generate controller Admin index
+
+
+```
+<div class="depot_form">
+  <% if flash[:alert] %>
+    <p id="notice"><%= flash[:alert] %></p>
+  <% end %>
+  
+  <%= form_tag do %>
+  <fieldset>
+    <legend>Please Log In</legend>
+    <div>
+      <%= label_tag :name%>
+      <%= text_field_tag :name, params[:name]%>
+    </div>
+    <div>
+      <%= label_tag :password%>
+      <%= password_field_tag :password, params[:password]%>
+    </div>
+    <div>
+      <%= submit_tag "Login" %>
+    </div>
+  </fieldset>
+  <% end %>
+</div>
+```
+
+This form is different from ones we saw earlier. Rather than using form_for, it
+uses form_tag, which simply builds a regular HTML <form>. Inside that form,
+it uses text_field_tag and password_field_tag, two helpers that create HTML <input>
+tags. Each helper takes two parameters. The first is the name to give to the
+field, and the second is the value with which to populate the field. This style
+of form allows us to associate values in the params structure directly with form
+fields—no model object is required. In our case, we chose to use the params
+object directly in the form. An alternative would be to have the controller set
+instance variables.
+We also make use of the label_tag helpers to create HTML <label> tags. This
+helper also accepts two parameters. The first contains the name of the field,
+and the second contains the label to be displayed.

@@ -1,4 +1,22 @@
 Depot::Application.routes.draw do
+  # In the case of admin, we will shorten the URL that the user has to enter (by
+  # removing the /index part) and map it to the full action.
+  get 'admin'=> 'admin#index'
+  
+  # Note that login is mapped to both the new and create actions, the difference being
+  # whether the request was an HTTP GET or HTTP POST.
+  # We also make use of a shortcut: wrapping the session route declarations in
+  # a block and passing it to a controller() class method. This saves us a bit of typing
+  # as well as makes the routes easier to read.
+  controller :sessions do
+    get 'login' => :new
+    post 'login' => :create
+    delete 'logout' => :destroy
+  end
+  
+  # get "sessions/new"
+  # get "sessions/create"
+  # get "sessions/destroy"
   resources :users
 
   resources :orders
@@ -15,6 +33,7 @@ Depot::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
+  # as: 'store' ,tells Rails to create a store_path accessor method
   root 'store#index', as: 'store'
 
   # Example of regular route:
