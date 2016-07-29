@@ -7,3 +7,16 @@ es:
       questions: "Preguntas"
       news: "Noticias"
       contact:  "Contacto"
+      login: "Iniciar sesión"
+      logout: "Cerrar sesión"
+      
+  store:
+    index:
+      title_html: "Su Cat&aacute;logo de Pragmatic"
+      add_html: "2A&ntilde;adir al Carrito"
+      
+  carts:
+    cart:
+      your_cart: "Carrito de la Compra"
+      check_out: "Comprar"
+      empty_cart: "Vaciar Carrito"  
