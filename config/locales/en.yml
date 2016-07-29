@@ -21,3 +21,12 @@
 
 en:
   hello: "Hello world"
+
+  layouts:
+    application:
+      title:  "Progmatic Bookshelf"
+      home: "Home"
+      questions: "Questions"
+      news: "News"
+      contact: "Contact"
+      
