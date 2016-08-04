@@ -1,4 +1,6 @@
 Depot::Application.routes.draw do
+  resources :shipments
+
   # In the case of admin, we will shorten the URL that the user has to enter (by
   # removing the /index part) and map it to the full action.
   get 'admin'=> 'admin#index'

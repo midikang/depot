@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @shipment.status %>
+</p>
+
+<p>
+  <strong>Buyer:</strong>
+  <%= @shipment.buyer %>
+</p>
+
+<p>
+  <strong>Ship date:</strong>
+  <%= @shipment.ship_date %>
+</p>
+
+<p>
+  <strong>Origin:</strong>
+  <%= @shipment.origin %>
+</p>
+
+<p>
+  <strong>Destination:</strong>
+  <%= @shipment.destination %>
+</p>
+
+<p>
+  <strong>Total weight:</strong>
+  <%= @shipment.total_weight %>
+</p>
+
+<p>
+  <strong>Total volumn:</strong>
+  <%= @shipment.total_volumn %>
+</p>
+
+<p>
+  <strong>Priority:</strong>
+  <%= @shipment.priority %>
+</p>
+
+<p>
+  <strong>Order type:</strong>
+  <%= @shipment.order_type %>
+</p>
+
+<%= link_to 'Edit', edit_shipment_path(@shipment) %> |
+<%= link_to 'Back', shipments_path %>

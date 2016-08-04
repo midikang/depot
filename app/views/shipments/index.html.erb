@@ -1,0 +1,43 @@
+<h1><%= image_tag("icons/list.gif")%>Shipment List <%= image_tag("icons/viewswitch.gif") %></h1>
+
+<table border="0.5">
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Buyer</th>
+      <th>Ship date</th>
+      <th>Origin</th>
+      <th>Destination</th>
+      <th>Total weight</th>
+      <th>Total volumn</th>
+      <th>Priority</th>
+      <th>Order type</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @shipments.each do |shipment| %>
+      <tr class="<%= cycle('list_line_odd','list_line_even')%>">
+        <td><%= shipment.status %></td>
+        <td><%= shipment.buyer %></td>
+        <td><%= shipment.ship_date %></td>
+        <td><%= shipment.origin %></td>
+        <td><%= shipment.destination %></td>
+        <td><%= shipment.total_weight %></td>
+        <td><%= shipment.total_volumn %></td>
+        <td><%= shipment.priority %></td>
+        <td><%= shipment.order_type %></td>
+        <td><%= image_tag("icons/action.gif")%> <%= link_to 'Show', shipment %></td>
+        <td><%= image_tag("icons/action.gif")%> <%= link_to 'Edit', edit_shipment_path(shipment) %></td>
+        <td><%= image_tag("icons/action.gif")%> <%= link_to 'Destroy', shipment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Shipment', new_shipment_path %>

@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  status: MyString
+  buyer: MyString
+  ship_date: 2016-08-03 13:40:00
+  origin: MyString
+  destination: MyString
+  total_weight: 9.99
+  total_volumn: 9.99
+  priority: MyString
+  order_type: MyString
+
+two:
+  status: MyString
+  buyer: MyString
+  ship_date: 2016-08-03 13:40:00
+  origin: MyString
+  destination: MyString
+  total_weight: 9.99
+  total_volumn: 9.99
+  priority: MyString
+  order_type: MyString

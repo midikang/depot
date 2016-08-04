@@ -58,3 +58,124 @@ Product.create!(title: 'Agile Web Development with Rails 4',
       </p>},
   image_url: 'aedr.jpg',
   price: 50.3)
+
+Shipment.delete_all
+Shipment.create!(status: 'Shipment Created',
+  buyer: "Google",
+  ship_date:   Time.zone.now,    
+  origin: "Beijing",
+  destination: "Shanghai",
+  total_weight: 123.45,
+  total_volumn: 456.78,
+  priority: "Urgent",
+  order_type: "Sales Order")
+  
+Shipment.create!(status: 'Send To Node',
+  buyer: "Google",
+  ship_date:   Time.zone.now,    
+  origin: "Beijing",
+  destination: "Shanghai",
+  total_weight: 123.45,
+  total_volumn: 456.78,
+  priority: "Normal",
+  order_type: "Sales Order")
+  
+Shipment.create!(status: 'Shipment Packed',
+  buyer: "Google",
+  ship_date:   Time.zone.now,    
+  origin: "Beijing",
+  destination: "Shanghai",
+  total_weight: 123.45,
+  total_volumn: 456.78,
+  priority: "Urgent",
+  order_type: "Sales Order")
+  
+Shipment.create!(status: 'Shipment Shipped',
+  buyer: "Google",
+  ship_date:   Time.zone.now,    
+  origin: "Beijing",
+  destination: "Shanghai",
+  total_weight: 123.45,
+  total_volumn: 456.78,
+  priority: "Urgent",
+  order_type: "Sales Order")  
+
+Shipment.create!(status: 'Shipment Created',
+  buyer: "Google",
+  ship_date:   Time.zone.now,    
+  origin: "Beijing",
+  destination: "Shanghai",
+  total_weight: 123.45,
+  total_volumn: 456.78,
+  priority: "Urgent",
+  order_type: "Sales Order")
+  
+Shipment.create!(status: 'Send To Node',
+  buyer: "Google",
+  ship_date:   Time.zone.now,    
+  origin: "Beijing",
+  destination: "Shanghai",
+  total_weight: 123.45,
+  total_volumn: 456.78,
+  priority: "Normal",
+  order_type: "Sales Order")
+  
+Shipment.create!(status: 'Shipment Packed',
+  buyer: "Google",
+  ship_date:   Time.zone.now,    
+  origin: "Beijing",
+  destination: "Shanghai",
+  total_weight: 123.45,
+  total_volumn: 456.78,
+  priority: "Urgent",
+  order_type: "Sales Order")
+  
+Shipment.create!(status: 'Shipment Shipped',
+  buyer: "Google",
+  ship_date:   Time.zone.now,    
+  origin: "Beijing",
+  destination: "Shanghai",
+  total_weight: 123.45,
+  total_volumn: 456.78,
+  priority: "Urgent",
+  order_type: "Sales Order")  
+  
+Shipment.create!(status: 'Shipment Created',
+  buyer: "Google",
+  ship_date:   Time.zone.now,    
+  origin: "Beijing",
+  destination: "Shanghai",
+  total_weight: 123.45,
+  total_volumn: 456.78,
+  priority: "Urgent",
+  order_type: "Sales Order")
+  
+Shipment.create!(status: 'Send To Node',
+  buyer: "Google",
+  ship_date:   Time.zone.now,    
+  origin: "Beijing",
+  destination: "Shanghai",
+  total_weight: 123.45,
+  total_volumn: 456.78,
+  priority: "Normal",
+  order_type: "Sales Order")
+  
+Shipment.create!(status: 'Shipment Packed',
+  buyer: "Google",
+  ship_date:   Time.zone.now,    
+  origin: "Beijing",
+  destination: "Shanghai",
+  total_weight: 123.45,
+  total_volumn: 456.78,
+  priority: "Urgent",
+  order_type: "Sales Order")
+  
+Shipment.create!(status: 'Shipment Shipped',
+  buyer: "Google",
+  ship_date:   Time.zone.now,    
+  origin: "Beijing",
+  destination: "Shanghai",
+  total_weight: 123.45,
+  total_volumn: 456.78,
+  priority: "Urgent",
+  order_type: "Sales Order")    
