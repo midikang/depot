@@ -1,6 +1,7 @@
 <% if notice %>
   <p id="notice"><%= notice %></p>
 <% end %>
+<% @page_title = "Warm welcome" %>
 <h1><%= t('.title_html')%></h1>
 <% cache ['store', Product.latest] do %>
   <% @products.each do |product| %>

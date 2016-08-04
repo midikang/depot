@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin</title>
+  <%= stylesheet_link_tag    "application", media: "all",
+    "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="<%= controller.controller_name %>">
+  
+  <div id="columns">
+    <div id="side">
+     
+      <ul>
+        <li><a href="#">Debug</a></li>
+        <li><%= link_to 'Routes', 'rails/info/routes' %></li>
+      </ul>
+      
+      
+      <% if session[:user_id]%>
+        <ul>
+          <li><%= link_to 'Orders', orders_path %></li>
+          <li><%= link_to 'Products', products_path%></li>
+          <li><%= link_to 'Users', users_path%></li>
+        </ul>
+        <%= button_to t('.logout'), logout_path, method: :delete%>
+      <% else %>
+        <%= button_to t('.login'), login_path, method: :get%>
+      <% end %>
+    </div>
+    <div id="main">
+      <%= yield %>
+    </div>
+  </div>
+</body>
+</html>
